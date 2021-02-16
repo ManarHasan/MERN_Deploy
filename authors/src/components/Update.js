@@ -23,7 +23,7 @@ const Update = (props) => {
 
     const submitHandler = e =>{
         e.preventDefault();
-        axios.put("http://localhost:8000/api/author/"+props.id, {
+        axios.post("http://localhost:8000/api/author/"+props.id, {
             name
         })
             .then(res => navigate("/"))
