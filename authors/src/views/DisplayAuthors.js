@@ -18,7 +18,7 @@ const DisplayAuthors = () => {
     }, [])
 
     const deleteAuthor = (id) => {
-        axios.delete("http://localhost:8000/api/delete/"+id)
+        axios.get("http://localhost:8000/api/delete/"+id)
             .then(res => setAuthors(authors.filter((author) => author._id != id)))
     }
 
